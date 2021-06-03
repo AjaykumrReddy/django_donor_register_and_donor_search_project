@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Dela+Gothic+One&family=Londrina+Solid:wght@400;900&family=New+Tegomin&display=swap');
+
+{% load static %}
+*{
+
+    box-sizing: border-box;
+}
+
+.section {
+
+    overflow-x: hidden;
+}
+
+.section1{
+
+    padding-top: 3em;
+    padding-bottom: 14em;
+    font-family: alfa slab, serif;
+    color: #2f31e4;
+    font-size: 2em;
+    text-align: center;
+    text-shadow:1px 1px gray;
+
+}
+.section2{
+
+    padding-bottom: 7em;
+    text-align: center;
+}
+
+.section3{
+
+    padding-bottom: 10em;
+    background: cyan;
+    background: linear-gradient(to left bottom,white,orangered);
+    font-family: 'londrina solid', cursive;
+    font-size: 2em;
+    text-align: center;
+
+}
+
+.section4 {
+    padding-top: 1em;
+    padding-bottom: 12em;
+    background: #0e0a1b;
+    font-family: 'londrina solid', cursive;
+    text-align: center;
+    color: white;
+}
+
+.center{
+    text-align: center;
+}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}SearchDonor{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" class="style">
+</head>
+<body>
+<div class="container" style="padding-top: 5em; padding-bottom: 2em">
+
+
+        <form method="get">
+        <div style="background-color: beige; padding:2em 0 2em 1em;border-radius: 10px;">
+
+           {% csrf_token %}
+            {{ myFilter.form }}
+
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+        </form>
+            <br>
+             <table class="table">
+                        <tr>
+                            <th>NAME</th>
+                            <th>GENDER</th>
+                            <th>AGE</th>
+                            <th>BLOOD GROUP</th>
+                            <th>NUMBER</th>
+                            <th>PLACE</th>
+
+                        </tr>
+                        {% for donor in donors %}
+                            <tr>
+                                <td>{{ donor.name }}</td>
+                                <td>{{ donor.gender }}</td>
+                                <td>{{ donor.Age }}</td>
+                                <td>{{ donor.Blood_Group }}</td>
+                                <td>{{ donor.phone }}</td>
+                                <td>{{ donor.city }}</td>
+                            </tr>
+                        {% endfor %}
+
+             </table>
+
+    </div>
+
+
+
+
+</body>
+</html>
+
+{% endblock %}

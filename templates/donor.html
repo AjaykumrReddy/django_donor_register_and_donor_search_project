@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}DonorRegistration{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" class="style">
+</head>
+
+<div class="container" style="padding-top: 5em; padding-bottom: 2em">
+    <div style="background-color: beige; padding:2em 2em 5em 2em; margin:5px;border-radius: 10px;">
+        <form method="POST">
+            <table>
+            {% csrf_token %}
+            {{ form.as_table }}
+            </table><br>
+            <input type="submit" class="btn-primary" value="submit">
+        </form>
+    </div>
+</div>
+
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{%  extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{% block title %}DonorsView{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" class="style">
+</head>
+<body>
+
+
+
+
+    <!-- section1-->
+<section class="section1">
+
+    <div class="col-md-6 col-sm-12">
+        <figure>
+        <img src="{% static 'images/poverty5.jpg' %}" alt="img1" width="100%" height="150%" class="img-rounded img-responsive">
+        </figure>
+    </div>
+    <div class="col-md-6 col-sm-12"> <br>
+    “These days there is a lot of poverty in the world, and that’s a scandal when we have so many riches
+        and resources to give to everyone. We all have to think about how we can become a little poorer.”<br>
+        <a href="{% url 'donate' %}" class="btn btn-info btn-lg" role="button">DONATE NOW</a><br>
+    </div>
+</section>
+
+    <!-- section 2 -->
+
+<section class="section2">
+<div class="our-services section-padding position-relative">
+    <div class="container">
+        <div class="row justify-content-sm-center">
+            <div class="col-xl-7 col-lg-8 col-md-11">
+                <div class="section-tittle text-center mb-70">
+                    <h2 style="font-family: 'Comic Sans MS',serif">We serve for peoples</h2>
+                    <p><strong>“We make a living by what we get, we make a life by what we give.”</strong></p>
+                </div>
+            </div>
+        </div><br>
+        <div class="row justify-content-between">
+            <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-cap">
+                        <h3><a href="#"><strong>Pure Food & Water</strong></a></h3>
+                        <p><strong>“Owners of dogs will have noticed that, if you provide them with
+                            food and water and shelter and affection, they will think you are god.
+                            Yeah you can be a god by serving people..”</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-services text-center mb-30">
+                     <div class="services-cap">
+                         <h3><a href="#"><strong>Health & Medicine</strong></a></h3>
+                        <p><strong>Odio aliquet, fringilla odio eget, tincidunt nunc duis aliquet pulvinar ante employees
+                            and organizations to support.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-cap">
+                        <h3><a href="#"><strong>Education</strong></a></h3>
+                        <p><strong>Odio aliquet, fringilla odio eget, tincidunt nunc duis aliquet pulvinar ante employees
+                            and organizations to support.</strong>
+                        </p>/
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+    <!-- section 3 -->
+
+<section class="section3">
+    <div class="col-md-6 col-sm-6">
+        <img src="{% static 'images/blood.png' %}" alt="" width="50%">
+    </div><br><br>
+    <div class="col-md-4 col-sm-12">
+        “You Are Not Useless; Know Your Worth By Donating Blood!”<br><br>
+        <a href="{% url 'donor' %}"><button type="button" class="btn btn-primary">DONATE BLOOD</button></a>
+         <a href="{% url 'search' %}"><button type="button" class="btn btn-primary" style="round-clip: 1px">SEARCH A DONOR</button></a>
+    </div>
+    <div class="col-md-4 col-sm-12"></div>
+</section>
+
+    <!-- section 4 -->
+<section class="section4">
+    <div class="col-md-6 col-sm-12">
+        <br><br><h1>footer1</h1>
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <br><br><h1>footer</h1>
+    </div>
+    <div class="col-md-2 col-sm-12">
+        <br><br><h1>footer</h1>
+    </div>
+</section>
+
+</body>
+</html>
+{% endblock %}
